@@ -13,3 +13,11 @@ total_number_list=sum(number_list)
 average_number= total_number_list/rounds
 print(f"The average numbers is {average_number}")
 
+usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn',
+             'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
+
+username=input("Enter your username: ")
+if username in usernames:
+    print("Access Granted")
+else:
+    print("Access Denied")
