@@ -1,7 +1,15 @@
-numbers=[5, 20, 1, 2, 3]
-for number in numbers:
-    print(f"Number: {number}")
-print("")
 
-print(f"The first number is {number[0]}")
-print(f"The last number is {number[1]}")
+number_list= []
+rounds= 5
+for i in range(rounds):
+    number=int(input("Number: "))
+    number_list.append(number)
+
+print(f"The first number is {number_list[0]}")
+print(f"The last number is {number_list[-1]}")
+print(f"The smallest number is {min(number_list)}")
+print(f"The largest number is {max(number_list)}")
+total_number_list=sum(number_list)
+average_number= total_number_list/rounds
+print(f"The average numbers is {average_number}")
+
