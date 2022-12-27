@@ -25,3 +25,5 @@ def main():
             print(f"Guitar {i}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost:10,.2f}{vintage}")
     else:
         print("There are no guitars, buy one.")
+
+main()
