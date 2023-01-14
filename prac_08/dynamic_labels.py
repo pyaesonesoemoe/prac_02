@@ -6,17 +6,19 @@ from kivy.uix.button import Button
 class DynamicLabelsApp(App):
 
     def __init__(self, **kwargs):
-        super.().__init__(**kwargs)
-        self.name={"Bob Brown", "Cat Cyan", "Oren Ochre"}
+        super().__init__(**kwargs)
+        self.names={"Bob Brown", "Cat Cyan", "Oren Ochre"}
 
     def build(self):
         self.title= "Dynamic labels"
         self.root= Builder.load_file("dynamic_labels.kv")
-        for name in self.names:
-            self.create_widgets(name)
-
+        self.create_labels()
         return self.root
 
-    def create_widgets(self, name):
-        button= Button(text=name)
-        self.root.ids.main.box.add_widget(button)
+    def create_labels(self):
+        for name in self.names:
+            temp_label= Label(text=name)
+            temp_label.color= NEW_COLOUR
+            self.root.ids.main_box.add_widget(temp_label)
+
+DynamicLabelsApp().run()
